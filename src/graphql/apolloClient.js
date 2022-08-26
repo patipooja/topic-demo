@@ -13,7 +13,7 @@ const defaultOptions = {
   },
 };
 
-let accessToken = "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";
+let accessToken = "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";
 const authLink = setContext((_, { headers }) => {
   const token = accessToken || getCookie("_access_token");
   accessToken = token;
