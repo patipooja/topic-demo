@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { useQuery } from '@apollo/client';
-import { SEARCH_TOPICS } from './graphql';
+import { useState } from "react";
+import { useQuery } from "@apollo/client";
+import { SEARCH_TOPICS } from "./query";
 
 export const useGetTopics = (topic) => {
   const [relatedTopics, setRelatedTopics] = useState([]);
   const [topics, setTopics] = useState([]);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [totalCount, setTotalCount] = useState(10);
 
   const onCompleted = (res) => {
@@ -22,7 +22,7 @@ export const useGetTopics = (topic) => {
     variables: {
       topic: topic,
     },
-    fetchPolicy: 'network-only',
+    fetchPolicy: "network-only",
     onCompleted,
     onError,
   });

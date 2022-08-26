@@ -1,21 +1,21 @@
-import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
-import { getCookie } from './commonActions.js';
+import { ApolloClient, createHttpLink, InMemoryCache } from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+import { getCookie } from "../utils/commonActions.js";
 
 const httpLink = createHttpLink({
-  uri: 'https://api.github.com/graphql',
+  uri: "https://api.github.com/graphql",
 });
 
 const defaultOptions = {
   watchQuery: {
-    fetchPolicy: 'no-cache',
-    errorPolicy: 'all',
+    fetchPolicy: "no-cache",
+    errorPolicy: "all",
   },
 };
 
-let accessToken = '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';
+let accessToken = "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";
 const authLink = setContext((_, { headers }) => {
-  const token = accessToken || getCookie('_access_token');
+  const token = accessToken || getCookie("_access_token");
   accessToken = token;
 
   return {

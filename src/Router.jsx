@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { deepPurple } from '@mui/material/colors';
-import Topics from './components/Topics';
-import Header from './components/Header';
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { deepPurple } from "@mui/material/colors";
+import Topics from "./feature/topics/Topics";
+import Header from "./feature/components/Header";
 
 const theme = createTheme({
   palette: {
@@ -17,7 +17,7 @@ const theme = createTheme({
 });
 
 const Router = () => {
-  const [topic, setTopic] = useState('react');
+  const [topic, setTopic] = useState("react");
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>

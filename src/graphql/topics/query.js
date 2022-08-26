@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const SEARCH_TOPICS = gql`
   query searchTopic($topic: String!) {

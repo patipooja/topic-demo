@@ -1,7 +1,7 @@
-import React from 'react';
-import { ApolloProvider } from '@apollo/client';
-import apolloClient from './utils/apolloClient';
-import Router from './Router';
+import React from "react";
+import { ApolloProvider } from "@apollo/client";
+import apolloClient from "./graphql/apolloClient";
+import Router from "./Router";
 
 const App = () => {
   return (
